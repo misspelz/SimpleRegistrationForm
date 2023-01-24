@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <script src="https://kit.fontawesome.com/65e9ac7cab.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+              screen: {
+                md: "768px",
+                lg: "1024px"
+              },
+            extend: {
+              colors: {
+                clifford: '#da373d'
+              }
+            
+            }
+          }
+        }
+      </script>
+</head>
+<body class="m-0 p-0 box-border">
+
+    <form id="container" class="ml-2 mr-2 mt-4 mb-4 shadow-gray shadow-md p-4 md:ml-40 md:mr-40 lg:ml-96 lg:mr-96 lg:m-16">
+        <div id="register" class="bg-gray-100 h-[10vh] flex justify-center items-center rounded">
+            <h1 class="text-[30px]  font-semibold">Register</h1>
+        </div>
+
+        <div id="names" class="lg:flex w-full">
+            <div class="w-full mt-[20px] lg:mr-6">
+                <label for="first-name" class="font-semibold mt-[40px]">First Name</label>
+                <input type="text" id="first-name" name="first-name" class="w-[100%] border-[1px] border-gray p-2 border-solid rounded mt-[5px]">
+                <p id="fname-error-msg" class="text-red-600 hidden">please, start with an uppercase</p>
+            </div>    
+            
+            <div id="last-name" class="w-full mt-[20px]">
+                <label for="last-name" class="font-semibold">Last Name</label>
+                <input type="text" id="last-name" name="last-name" class="w-[100%] border-[1px] border-gray p-2 border-solid rounded mt-[5px]">
+                <p id="lname-error-msg" class="text-red-600 hidden">please, start with an uppercase</p>
+            </div>
+        </div>
+
+        <div id="email-address" class="w-full mt-[20px]">
+            <label for="email" class="font-semibold">Email Address</label>
+            <input type="email" id="email" name="email" class="w-[100%] border-[1px] border-gray p-2 border-solid rounded mt-[5px]">
+            <p id="email-error-msg" class="text-red-600 hidden">please, start with a lowercase</p>
+        </div>
+        
+        <div id="mobile-gender" class="lg:flex lg:justify-center lg:items-center ">
+            <div id="mobile" class="w-full mt-[20px]">
+                <label for="number" class="font-semibold">Mobile Number</label>
+                <input type="number" id="number" name="number" class="w-[100%] border-[1px] border-gray p-2 border-solid rounded mt-[5px]">
+                <p id="num-error-msg" class="text-red-600 hidden">please, enter a number</p>
+            </div> 
+            
+            <div id="gender" class="w-full lg:ml-8">
+                <p class="font-semibold mt-[20px] mb-[10px]">Gender</p>
+                <input type="radio" name="gender" id="male" value="male">
+                <label for="male" class="font-medium">Male</label>
+
+                <input type="radio" name="gender" id="female" value="female" class="ml-6 lg:ml-6">
+                <label for="female" class="font-medium">Female</label>
+            </div>
+        </div>
+
+        <div id="passwords" class="lg:flex">
+            <div id="password" class="w-full mt-[20px] lg:mr-6">
+                <label for="password" class="font-semibold">Password</label>
+                <input type="password" id="password" name="password" class="w-[100%] border-[1px] border-gray p-2 border-solid rounded mt-[5px]">
+                <p id="p-error-msg" class="text-red-600 hidden">please, enter a number</p>
+            </div>
+    
+            <div id="repeat-password" class="w-full mt-[20px]">
+                <label for="repeat-password" class="font-semibold">Repeat Password</label>
+                <input type="password" id="repeat-password" name="repeat-password" class="w-[100%] border-[1px] border-gray p-2 border-solid rounded mt-[5px]">
+                <p id="rp-error-msg" class="text-red-600 hidden">please, enter a number</p>
+            </div>
+        </div>
+
+        <div id="submit" class="w-full mt-[20px] flex justify-center items-center">
+            <a href="#"><button class="bg-blue-600 pt-2 pb-2 pl-8 pr-8 rounded text-white font-semibold lg:pl-16 lg:pr-16">Submit</button></a>
+        </div>
+    </form>
+<script src="./tform.js"></script>
+</body>
+</html>
